@@ -14,6 +14,15 @@ export default defineConfig({
       '@components': path.resolve(__dirname, './src/components'),
     },
   },
+    build: {
+    rollupOptions: {
+      external: [
+        'react',
+        'react-dom',
+        'react-router-dom'
+      ]
+    }
+  },
   // idk why this is highlighted, ill look into it. for now it is working 
   test: {
     globals: true,
